@@ -9,11 +9,6 @@ public class AIScript : MonoBehaviour {
 	//public ChangeMusic changeMusic;
 	public ScoreCount scoreCount;
 
-	bool recentTurn = false;
-	int frameBeforeTurn = 0;
-	int frameBeforeTeleport = 0;
-	bool chasePlayer = false;
-
 	// Use this for initialization
 	public Transform target;
 	public int moveSpeed;

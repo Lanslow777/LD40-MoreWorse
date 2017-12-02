@@ -6,8 +6,10 @@ public class WorldGenerator : MonoBehaviour
 {
 	public int Iterations = 5;
 	public int CollectablePerBoost;
+	public GameObject BadGuyPrefab;
 	public GameObject MalusPrefab;
 	public GameObject BonusPrefab;
+	public GameObject BulletPrefab;
 
 
 	void Start()
@@ -24,7 +26,7 @@ public class WorldGenerator : MonoBehaviour
 				}*/
 	}
 
-	int bonusPop = 0;
+
 	void Update(){
 		/*if (bonusPop > 3000) {
 			List<GameObject> mazeList = new List<GameObject>(GameObject.FindGameObjectsWithTag("MazeComponent"));
@@ -41,12 +43,29 @@ public class WorldGenerator : MonoBehaviour
 				} else
 						bonusPop++;*/
 		}
-		
-	public void SpawnObject(bool bonus){
+
+	int giftCollect = 0;
+	public void SpawnObject(bool bonus, bool gift){
 		GameObject newModulePrefab;
 		if(bonus) newModulePrefab = BonusPrefab;
 		else newModulePrefab = MalusPrefab;
 		GameObject newModule =(GameObject) Instantiate(newModulePrefab);
+		newModule.transform.position = new Vector2(Random.Range (-13, 13), 10);
+		if (gift && ++giftCollect % 5 == 0)
+			SpawnBadGuy ();
+	}
+
+	public void SpawnBadGuy(){
+		GameObject newModulePrefab = BadGuyPrefab;
+		GameObject newModule =(GameObject) Instantiate(newModulePrefab);
 		newModule.transform.position = new Vector2(Random.Range (-13, 13), 8);
+	}
+
+	public void SpawnBullet(Transform spawn, Transform goal){
+		GameObject newModulePrefab = BulletPrefab;
+		GameObject newModule =(GameObject) Instantiate(newModulePrefab);
+		newModule.transform.position = spawn.position;
+		AIBullet script = newModule.GetComponent<AIBullet>();
+		script.target = goal.position;
 	}
 }
