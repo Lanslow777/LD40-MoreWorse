@@ -52,7 +52,7 @@ Rigidbody2D:
   m_GameObject: {fileID: 1857879870025234}
   m_BodyType: 1
   m_Simulated: 1
-  m_UseFullKinematicContacts: 0
+  m_UseFullKinematicContacts: 1
   m_UseAutoMass: 0
   m_Mass: 1
   m_LinearDrag: 0
@@ -89,7 +89,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f5ebcccae7e175f4f9316f1307e6cdb5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 0}
+  target: {x: 0, y: 0, z: 0}
   moveSpeed: 5
 --- !u!212 &212222503879945502
 SpriteRenderer:

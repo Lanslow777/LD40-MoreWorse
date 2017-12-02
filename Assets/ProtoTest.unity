@@ -229,6 +229,10 @@ Prefab:
       propertyPath: m_Name
       value: CollisionSliderRight
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 2a71c12ae885e4f80b5144a4652bbeb4, type: 2}
+      propertyPath: m_TagString
+      value: Indestructible
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2a71c12ae885e4f80b5144a4652bbeb4, type: 2}
   m_IsPrefabParent: 0
@@ -700,6 +704,10 @@ Prefab:
       propertyPath: m_Name
       value: CollisionSliderLeft
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 2a71c12ae885e4f80b5144a4652bbeb4, type: 2}
+      propertyPath: m_TagString
+      value: Indestructible
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2a71c12ae885e4f80b5144a4652bbeb4, type: 2}
   m_IsPrefabParent: 0
@@ -753,6 +761,10 @@ Prefab:
     - target: {fileID: 6100000, guid: 2a71c12ae885e4f80b5144a4652bbeb4, type: 2}
       propertyPath: m_Size.x
       value: 26.854588
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 2a71c12ae885e4f80b5144a4652bbeb4, type: 2}
+      propertyPath: m_TagString
+      value: Indestructible
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2a71c12ae885e4f80b5144a4652bbeb4, type: 2}
