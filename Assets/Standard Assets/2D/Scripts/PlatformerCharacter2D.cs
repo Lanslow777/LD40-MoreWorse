@@ -21,7 +21,11 @@ namespace UnityStandardAssets._2D
         private bool m_FacingRight = true;  // For determining which way the player is currently facing.
 
         private void Awake()
-        {
+		{
+			//Modif de Vitesse et Saut
+			PlayerPrefs.SetFloat ("VitMax", m_MaxSpeed);
+			PlayerPrefs.SetFloat ("JumpMax", m_JumpForce);
+
             // Setting up references.
             m_GroundCheck = transform.Find("GroundCheck");
             m_CeilingCheck = transform.Find("CeilingCheck");
@@ -32,6 +36,10 @@ namespace UnityStandardAssets._2D
 
         private void FixedUpdate()
         {
+			//Modif de Vitesse et Saut
+			m_MaxSpeed = PlayerPrefs.GetFloat ("VitMax", 10f);
+			m_JumpForce = PlayerPrefs.GetFloat ("JumpMax", 400f);
+
             m_Grounded = false;
 
             // The player is grounded if a circlecast to the groundcheck position hits anything designated as ground
