@@ -22,8 +22,6 @@ public class ScoreCount : MonoBehaviour {
 		score += addScore;
 		PlayerPrefs.SetInt ("Score", score);
 		ScoreText.text = "Score : " + score;
-		PlayerPrefs.SetFloat ("VitMax", PlayerPrefs.GetFloat ("VitMax", 10f)-1);
-		PlayerPrefs.SetFloat ("JumpMax", PlayerPrefs.GetFloat ("JumpMax", 400f)-10);
 		if (score != 0 && score % scoreToLife == 0)
 						updateLife (true);
 	}

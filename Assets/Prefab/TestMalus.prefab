@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 5000000}
   - component: {fileID: 114646470056947256}
   m_Layer: 0
-  m_Name: TestBonus
+  m_Name: TestMalus
   m_TagString: Item
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -28,6 +28,14 @@ public class CollectByPlayer : MonoBehaviour {
 		{
 			scoreCount.updateScore(score);
 			Destroy(gameObject);
+			if (type == TypeObject.Bonus) {
+				PlayerPrefs.SetFloat ("VitMax", PlayerPrefs.GetFloat ("VitMax", 10f) - 1);
+				PlayerPrefs.SetFloat ("JumpMax", PlayerPrefs.GetFloat ("JumpMax", 400f) - 10);
+			}
+			else if(type == TypeObject.Boost){
+				PlayerPrefs.SetFloat ("VitMax", PlayerPrefs.GetFloat ("VitMax", 10f) + 1);
+				PlayerPrefs.SetFloat ("JumpMax", PlayerPrefs.GetFloat ("JumpMax", 400f) + 10);
+			}
 			if (type != TypeObject.Bonus && IsLastCollectable ()) {
 				PlayerPrefs.Save ();
 				SceneManager.LoadScene ("TestScene");
