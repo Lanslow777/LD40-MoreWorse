@@ -7,6 +7,8 @@ public class WorldGenerator : MonoBehaviour
 	public int Iterations = 5;
 	public int CollectablePerBoost;
 	public GameObject BadGuyPrefab;
+	public GameObject BadGuy2Prefab;
+	public GameObject BadGuy3Prefab;
 	public GameObject MalusPrefab;
 	public GameObject BonusPrefab;
 	public GameObject BulletPrefab;
@@ -51,12 +53,19 @@ public class WorldGenerator : MonoBehaviour
 		else newModulePrefab = MalusPrefab;
 		GameObject newModule =(GameObject) Instantiate(newModulePrefab);
 		newModule.transform.position = new Vector2(Random.Range (-13, 13), 10);
-		if (gift && ++giftCollect % 5 == 0)
-			SpawnBadGuy ();
+		if (gift) {
+			giftCollect++;
+			if (giftCollect % 5 == 0)
+				SpawnBadGuy (BadGuyPrefab);
+			if (giftCollect % 10 == 0)
+				SpawnBadGuy (BadGuy2Prefab);
+			if (giftCollect % 20 == 0)
+				SpawnBadGuy (BadGuy3Prefab);
+		}
 	}
 
-	public void SpawnBadGuy(){
-		GameObject newModulePrefab = BadGuyPrefab;
+	public void SpawnBadGuy(GameObject prefab){
+		GameObject newModulePrefab = prefab;
 		GameObject newModule =(GameObject) Instantiate(newModulePrefab);
 		newModule.transform.position = new Vector2(Random.Range (-13, 13), 8);
 	}
