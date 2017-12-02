@@ -31,9 +31,11 @@ public class AIBullet : MonoBehaviour {
 		myTransform.position += direction * moveSpeed * Time.deltaTime;
 	}
 
+	bool touch = false;
 	void OnCollisionEnter2D(Collision2D col){
-		if (col.gameObject.tag == "Player")
+		if (col.gameObject.tag == "Player" && !touch)
 		{
+			touch = true;
 			SceneManager.LoadScene(SceneManager.GetSceneAt(0).name);
 			scoreCount.updateLife(false);
 		}

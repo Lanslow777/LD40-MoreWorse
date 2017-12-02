@@ -53,9 +53,11 @@ public class AIScript : MonoBehaviour {
 		Gizmos.DrawLine(transform.position, transform.position + transform.right * scale);
 		}
 
+	bool touch = false;
 	void OnCollisionEnter2D(Collision2D col){
-	if (col.gameObject.tag == "Player")
+	if (col.gameObject.tag == "Player" && !touch)
 		{
+			touch = true;
 			SceneManager.LoadScene(SceneManager.GetSceneAt(0).name);
 			scoreCount.updateLife(false);
 		}

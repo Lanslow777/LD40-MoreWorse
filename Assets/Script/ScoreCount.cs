@@ -33,7 +33,7 @@ public class ScoreCount : MonoBehaviour {
 						life--;
 		PlayerPrefs.SetInt ("Life", life);
 		LifeText.text = "Life : " + life;
-				if(life == 0) SceneManager.LoadScene ("TheWorstItIs");//Application.LoadLevel ("EndScene");
+				if(life <= 0) SceneManager.LoadScene ("TheWorstItIs");//Application.LoadLevel ("EndScene");
 	}
 
 	void OnMouseDown(){
