@@ -35,4 +35,10 @@ public class ScoreCount : MonoBehaviour {
 		LifeText.text = "Life : " + life;
 				if(life == 0) SceneManager.LoadScene ("EndScene");//Application.LoadLevel ("EndScene");
 	}
+
+	void OnMouseDown(){
+		score = 0;
+		PlayerPrefs.SetInt ("Score", score);
+		ScoreText.text = "Score : " + score;
+	}
 }

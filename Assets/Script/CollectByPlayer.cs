@@ -14,6 +14,7 @@ public class CollectByPlayer : MonoBehaviour {
 	public int score;
 	public TypeObject type;
 	ScoreCount scoreCount;
+	bool touch = false;
 
 	void Start(){
 		GameObject gameObject = GameObject.FindGameObjectWithTag ("ScoreText");
@@ -24,8 +25,32 @@ public class CollectByPlayer : MonoBehaviour {
 
 	public void OnTriggerEnter2D(Collider2D col)
 	{
-		if (col.tag == "Player") 
+		if (col.tag == "Player" & !touch) 
 		{
+			touch = true;
+			scoreCount.updateScore(score);
+			Destroy(gameObject);
+			if (type == TypeObject.Bonus) {
+				PlayerPrefs.SetFloat ("VitMax", PlayerPrefs.GetFloat ("VitMax", 10f) - 1);
+				PlayerPrefs.SetFloat ("JumpMax", PlayerPrefs.GetFloat ("JumpMax", 400f) - 10);
+			}
+			else if(type == TypeObject.Boost){
+				PlayerPrefs.SetFloat ("VitMax", PlayerPrefs.GetFloat ("VitMax", 10f) + 1);
+				PlayerPrefs.SetFloat ("JumpMax", PlayerPrefs.GetFloat ("JumpMax", 400f) + 10);
+			}
+			if (type != TypeObject.Bonus && IsLastCollectable ()) {
+				PlayerPrefs.Save ();
+				SceneManager.LoadScene ("TestScene");
+				//Application.LoadLevel ("TestScene");
+			}
+		}
+	}
+
+	public void OnCollisionEnter2D(Collision2D col)
+	{
+		if (col.gameObject.tag == "Player" & !touch) 
+		{
+			touch = true;
 			scoreCount.updateScore(score);
 			Destroy(gameObject);
 			if (type == TypeObject.Bonus) {
