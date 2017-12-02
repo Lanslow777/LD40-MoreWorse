@@ -4,4 +4,13 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/TheMoreYouHave.unity
+    guid: ade871f0b4ddcab419f95c17e79180f4
+  - enabled: 1
+    path: Assets/ProtoTest.unity
+    guid: f31ba97998393fc47a53114b381724ee
+  - enabled: 1
+    path: Assets/TheWorstItIs.unity
+    guid: aff64ae05d5d88047b1b33d2ce2c65e8

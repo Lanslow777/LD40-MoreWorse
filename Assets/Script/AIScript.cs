@@ -56,8 +56,8 @@ public class AIScript : MonoBehaviour {
 	void OnCollisionEnter2D(Collision2D col){
 	if (col.gameObject.tag == "Player")
 		{
-			scoreCount.updateLife(false);
 			SceneManager.LoadScene(SceneManager.GetSceneAt(0).name);
+			scoreCount.updateLife(false);
 		}
 	}
 	
