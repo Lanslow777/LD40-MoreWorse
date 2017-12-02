@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class AIBullet : MonoBehaviour {
 	private Transform myTransform;
+	private ScoreCount scoreCount;
 	private Vector3 direction;
 	private bool goal;
 	public Vector3 target;
@@ -18,6 +19,10 @@ public class AIBullet : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		direction = (target - myTransform.position).normalized;
+		GameObject gameObject = GameObject.FindGameObjectWithTag ("ScoreText");
+		if (gameObject != null) {
+			scoreCount = gameObject.GetComponent<ScoreCount>();
+		}
 	}
 	
 	// Update is called once per frame
@@ -29,6 +34,7 @@ public class AIBullet : MonoBehaviour {
 	void OnCollisionEnter2D(Collision2D col){
 		if (col.gameObject.tag == "Player")
 		{
+			scoreCount.updateLife(false);
 			SceneManager.LoadScene(SceneManager.GetSceneAt(0).name);
 		}
 		else if(col.gameObject.tag != "Indestructible"){

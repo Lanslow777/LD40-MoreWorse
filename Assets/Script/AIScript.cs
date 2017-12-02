@@ -7,7 +7,7 @@ public class AIScript : MonoBehaviour {
 
 	public int frameBeforeStart;
 	//public ChangeMusic changeMusic;
-	public ScoreCount scoreCount;
+	private ScoreCount scoreCount;
 
 	// Use this for initialization
 	public Transform target;
@@ -22,8 +22,11 @@ public class AIScript : MonoBehaviour {
 
 	void Start () {
 		GameObject go = GameObject.FindGameObjectWithTag("Player");
-
 		target = go.transform;
+		GameObject gameObject = GameObject.FindGameObjectWithTag ("ScoreText");
+		if (gameObject != null) {
+			scoreCount = gameObject.GetComponent<ScoreCount>();
+		}
 	}
 
 	// Update is called once per frame
@@ -53,6 +56,7 @@ public class AIScript : MonoBehaviour {
 	void OnCollisionEnter2D(Collision2D col){
 	if (col.gameObject.tag == "Player")
 		{
+			scoreCount.updateLife(false);
 			SceneManager.LoadScene(SceneManager.GetSceneAt(0).name);
 		}
 	}

@@ -15,14 +15,14 @@ public class ScoreCount : MonoBehaviour {
 		score = PlayerPrefs.GetInt ("Score", 0);
 		life = PlayerPrefs.GetInt ("Life", 3);
 		ScoreText.text = "Score : " + score;
-		LifeText.text = "Life : " + life;
+		LifeText.text = "Lives : " + life;
 	}
 
 	public void updateScore (int addScore){
 		score += addScore;
 		PlayerPrefs.SetInt ("Score", score);
 		ScoreText.text = "Score : " + score;
-		if (score != 0 && score % scoreToLife == 0)
+		if (score != 0 && score % scoreToLife == 0 && addScore > 0)
 						updateLife (true);
 	}
 
@@ -39,6 +39,8 @@ public class ScoreCount : MonoBehaviour {
 	void OnMouseDown(){
 		score = 0;
 		PlayerPrefs.SetInt ("Score", score);
-		ScoreText.text = "Score : " + score;
+		life = 3;
+		LifeText.text = "Lives : " + life;
+		PlayerPrefs.SetInt ("Life", life);
 	}
 }
