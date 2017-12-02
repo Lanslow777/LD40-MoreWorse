@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.SceneManagement;
+using System;
 
 public class CollectByPlayer : MonoBehaviour {
 
@@ -61,16 +62,16 @@ public class CollectByPlayer : MonoBehaviour {
 			scoreCount.updateScore(score);
 			Destroy(gameObject);
 			if (type == TypeObject.Bonus) {
-				PlayerPrefs.SetFloat ("VitMax", PlayerPrefs.GetFloat ("VitMax", 10f) - 1);
-				PlayerPrefs.SetFloat ("JumpMax", PlayerPrefs.GetFloat ("JumpMax", 400f) - 10);
+				PlayerPrefs.SetFloat ("VitMax", Math.Max(PlayerPrefs.GetFloat ("VitMax", 10f) - 1, 1));
+				PlayerPrefs.SetFloat ("JumpMax", Math.Max(PlayerPrefs.GetFloat ("JumpMax", 400f) - 10, 10));
 			}
 			else if(type == TypeObject.Boost){
 				PlayerPrefs.SetFloat ("VitMax", PlayerPrefs.GetFloat ("VitMax", 10f) + 1);
 				PlayerPrefs.SetFloat ("JumpMax", PlayerPrefs.GetFloat ("JumpMax", 400f) + 10);
 			}
 
-			generator.SpawnObject ((Random.Range (0, 100) % 2 == 0));
-			generator.SpawnObject ((Random.Range (0, 100) % 2 == 0));
+			generator.SpawnObject ((UnityEngine.Random.Range (0, 100) % 2 == 0));
+			generator.SpawnObject ((UnityEngine.Random.Range (0, 100) % 2 == 0));
 			/*if (type != TypeObject.Bonus && IsLastCollectable ()) {
 				PlayerPrefs.Save ();
 				SceneManager.LoadScene ("TestScene");
