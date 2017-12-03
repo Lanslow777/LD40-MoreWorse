@@ -67,7 +67,7 @@ public class WorldGenerator : MonoBehaviour
 	public void SpawnBadGuy(GameObject prefab){
 		GameObject newModulePrefab = prefab;
 		GameObject newModule =(GameObject) Instantiate(newModulePrefab);
-		newModule.transform.position = new Vector2(Random.Range (-13, 13), 8);
+		newModule.transform.position = new Vector2(Random.Range (-13, 13), 9);
 	}
 
 	public void SpawnBullet(Transform spawn, Transform goal){

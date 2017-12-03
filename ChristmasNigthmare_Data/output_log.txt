@@ -1,0 +1,71 @@
+Initialize engine version: 2017.1.0f3 (472613c02cf7)
+GfxDevice: creating device client; threaded=1
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.0]
+    Renderer: NVIDIA GeForce GTX 880M (ID=0x1198)
+    Vendor:   NVIDIA
+    VRAM:     8154 MB
+    Driver:   22.21.13.8476
+Begin MonoManager ReloadAssembly
+Platform assembly: D:\Unity\LD40-MoreWorse\ChristmasNigthmare_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading D:\Unity\LD40-MoreWorse\ChristmasNigthmare_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: D:\Unity\LD40-MoreWorse\ChristmasNigthmare_Data\Managed\Assembly-CSharp-firstpass.dll (this message is harmless)
+Loading D:\Unity\LD40-MoreWorse\ChristmasNigthmare_Data\Managed\Assembly-CSharp-firstpass.dll into Unity Child Domain
+Platform assembly: D:\Unity\LD40-MoreWorse\ChristmasNigthmare_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading D:\Unity\LD40-MoreWorse\ChristmasNigthmare_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: D:\Unity\LD40-MoreWorse\ChristmasNigthmare_Data\Managed\UnityEngine.UI.dll (this message is harmless)
+Loading D:\Unity\LD40-MoreWorse\ChristmasNigthmare_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
+Platform assembly: D:\Unity\LD40-MoreWorse\ChristmasNigthmare_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
+Loading D:\Unity\LD40-MoreWorse\ChristmasNigthmare_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
+Platform assembly: D:\Unity\LD40-MoreWorse\ChristmasNigthmare_Data\Managed\UnityEngine.Timeline.dll (this message is harmless)
+Loading D:\Unity\LD40-MoreWorse\ChristmasNigthmare_Data\Managed\UnityEngine.Timeline.dll into Unity Child Domain
+Platform assembly: D:\Unity\LD40-MoreWorse\ChristmasNigthmare_Data\Managed\UnityEngine.Analytics.dll (this message is harmless)
+Loading D:\Unity\LD40-MoreWorse\ChristmasNigthmare_Data\Managed\UnityEngine.Analytics.dll into Unity Child Domain
+Platform assembly: D:\Unity\LD40-MoreWorse\ChristmasNigthmare_Data\Managed\System.dll (this message is harmless)
+Platform assembly: D:\Unity\LD40-MoreWorse\ChristmasNigthmare_Data\Managed\System.Core.dll (this message is harmless)
+- Completed reload, in  0.289 seconds
+<RI> Initializing input.
+<RI.Hid> Failed to create device file:
+ 2 Le fichier spécifié est introuvable.
+
+ 
+(Filename:  Line: 54)
+
+<RI> Input initialized.
+<RI> Initialized touch support.
+UnloadTime: 1.887452 ms
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 4.653334 ms
+
+Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 582.
+Total: 0.278534 ms (FindLiveObjects: 0.034684 ms CreateObjectMapping: 0.019819 ms MarkObjects: 0.211289 ms  DeleteObjects: 0.011679 ms)
+
+Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.413731 ms
+
+Unloading 1 unused Assets to reduce memory usage. Loaded Objects now: 582.
+Total: 0.223677 ms (FindLiveObjects: 0.046009 ms CreateObjectMapping: 0.015926 ms MarkObjects: 0.149354 ms  DeleteObjects: 0.002477 ms)
+
+Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.683772 ms
+
+Unloading 1 unused Assets to reduce memory usage. Loaded Objects now: 582.
+Total: 0.205627 ms (FindLiveObjects: 0.019465 ms CreateObjectMapping: 0.015926 ms MarkObjects: 0.167050 ms  DeleteObjects: 0.002831 ms)
+
+Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.629622 ms
+
+Unloading 1 unused Assets to reduce memory usage. Loaded Objects now: 582.
+Total: 0.249159 ms (FindLiveObjects: 0.034684 ms CreateObjectMapping: 0.019819 ms MarkObjects: 0.190408 ms  DeleteObjects: 0.003893 ms)
+
+Unloading 2 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.288444 ms
+
+Unloading 200 unused Assets to reduce memory usage. Loaded Objects now: 333.
+Total: 0.321358 ms (FindLiveObjects: 0.020173 ms CreateObjectMapping: 0.018757 ms MarkObjects: 0.120332 ms  DeleteObjects: 0.161741 ms)
+
+Setting up 4 worker threads for Enlighten.
+  Thread -> id: 7104 -> priority: 1 
+  Thread -> id: 3b70 -> priority: 1 
+  Thread -> id: 6614 -> priority: 1 
+  Thread -> id: 8a0 -> priority: 1 

@@ -23,7 +23,7 @@ public class LaunchGame : MonoBehaviour {
 						PlayerPrefs.SetInt ("Score", 0);
 						PlayerPrefs.SetInt ("Life", 3);
 						PlayerPrefs.Save ();
-						SceneManager.LoadScene ("ProtoTest");
+						SceneManager.LoadScene ("TheHouse");
 				} else {
 			Application.Quit();
 				}

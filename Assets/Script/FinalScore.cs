@@ -1,9 +1,10 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
 
 public class FinalScore : MonoBehaviour {
 
-	public TextMesh textMesh;
+	public Text textMesh;
 
 	// Use this for initialization
 	void Start () {
